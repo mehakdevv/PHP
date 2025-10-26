@@ -1,0 +1,63 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to bottom, rgb(241, 151, 241), rgb(166, 166, 239), rgb(160, 216, 239));
+	background-attachment: fixed; /* prevents gradient from repeating */
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+form {
+	max-width: 720px;
+	margin: 2rem auto;
+	padding: 1rem 1.25rem;
+	background: transparent; /* no form background */
+	border-radius: 0; /* no rounded border */
+}
+
+/* two-column helper for paired inputs (50% each) */
+.two-col {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.two-col input {
+	flex: 1 1 50%;
+	width: auto; /* override the 100% rule below */
+}
+
+
+/* Make inputs (text, email, tel, etc.) stretch to full width */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"],
+form input[type="search"],
+form textarea,
+form select {
+	width: 100%;
+	box-sizing: border-box; /* so padding doesn't break width */
+	padding: 0.5rem 0.6rem;
+	margin-top: 0.25rem;
+	margin-bottom: 0.75rem;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+}
+
+/* Center the heading inside the caption */
+form caption h2 {
+	text-align: center;
+	margin: 0 0 1rem 0;
+	font-size: 1.25rem;
+}
+
+/* Small screens: keep form responsive */
+@media (max-width: 480px) {
+	form { margin: 1rem; padding: 0.75rem; }
+}
+
+
